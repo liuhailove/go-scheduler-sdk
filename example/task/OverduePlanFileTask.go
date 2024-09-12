@@ -2,9 +2,9 @@ package task
 
 import (
 	"context"
-	xxl "github.com/liuhailove/go-scheduler-sdk"
+	gs "github.com/liuhailove/go-scheduler-sdk"
 )
 
-func OverduePlanFileTask(ctx context.Context, param *xxl.RunReq) (msg []string, err error) {
+func OverduePlanFileTask(ctx context.Context, param *gs.RunReq) (msg []string, err error) {
 	return []string{"OverduePlanFileTask"}, nil
 }

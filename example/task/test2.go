@@ -3,14 +3,14 @@ package task
 import (
 	"context"
 	"fmt"
-	xxl "github.com/liuhailove/go-scheduler-sdk"
+	gs "github.com/liuhailove/go-scheduler-sdk"
 	"github.com/liuhailove/go-scheduler-sdk/logging"
 	"math/rand"
 	"strconv"
 	"time"
 )
 
-func Test2(ctx context.Context, param *xxl.RunReq) (msg []string, err error) {
+func Test2(ctx context.Context, param *gs.RunReq) (msg []string, err error) {
 	fmt.Println("in test 2")
 	str := fmt.Sprintf("param %s", param.ExecutorParams)
 	fmt.Println(str)

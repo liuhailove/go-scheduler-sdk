@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	xxl "github.com/liuhailove/go-scheduler-sdk"
+	gs "github.com/liuhailove/go-scheduler-sdk"
 	"github.com/liuhailove/go-scheduler-sdk/logging"
 	"time"
 )
@@ -17,7 +17,7 @@ type A struct {
 	V1 string
 }
 
-func Test(ctx context.Context, param *xxl.RunReq) (msg []string, err error) {
+func Test(ctx context.Context, param *gs.RunReq) (msg []string, err error) {
 	fmt.Println("query second key", ctx.Value("secondKey"))
 	//time.Sleep(20 * time.Second)
 	for i := 0; i < 10; i++ {
@@ -47,8 +47,8 @@ func Test(ctx context.Context, param *xxl.RunReq) (msg []string, err error) {
 	return []string{"test 1 done", "test 2 done"}, nil
 }
 
-func TaskBillGenerate(cxt context.Context, param *xxl.RunReq) (msg []string, err error) {
-	fmt.Println(time.Now().String() + ":test one task" + param.ExecutorHandler + " param：" + param.ExecutorParams + " log_id:" + xxl.Int64ToStr(param.LogID))
+func TaskBillGenerate(cxt context.Context, param *gs.RunReq) (msg []string, err error) {
+	fmt.Println(time.Now().String() + ":test one task" + param.ExecutorHandler + " param：" + param.ExecutorParams + " log_id:" + gs.Int64ToStr(param.LogID))
 	cnt++
 	if cnt%3 == 0 {
 		zero--

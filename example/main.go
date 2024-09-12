@@ -31,10 +31,6 @@ func main() {
 				return taskFunc(ctx, param)
 			}
 		}),
-		//xxl.SetTimerDelayInMilliseconds(20),
-		//xxl.Endpoints([]string{"10.129.103.107:5381", "10.129.103.108:5381", "10.129.103.109:5381"}),
-		//xxl.SetRouterFlag("hello2"),
-		//xxl.SetSerialKeyPostfixGenFunc(task.MySerialKeyPostfixGenFunc),
 	)
 	exec.Init()
 	//设置日志查看handler
