@@ -6,7 +6,7 @@ import (
 )
 
 /**
-用来日志查询，显示到xxl-job-admin后台
+用来日志查询，显示到go-scheduler-admin后台
 */
 
 type LogHandler func(req *LogReq) *LogRes
