@@ -10,7 +10,7 @@ import (
 
 func main() {
 	exec := gs.NewExecutor(
-		gs.ServerAddr("http://localhost:8082/gs-job-admin"),
+		gs.ServerAddr("http://localhost:8082/gscheduler"),
 		gs.AccessToken(""),                 //请求令牌(默认为空)
 		gs.RegistryKey("my-golang-jobs-2"), //执行器名称
 		gs.SetLogger(&logger{}),            //自定义日志
