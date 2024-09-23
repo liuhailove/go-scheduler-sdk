@@ -79,7 +79,7 @@ type RunReq struct {
 	ParentLog                                    int64  `json:"parentLog"`                                    // 本次调度的父日志ID
 	InstanceId                                   string `json:"instanceId"`                                   // 实例ID，一次运行串联的任务实例ID一致
 	LogDateTime                                  int64  `json:"logDateTime"`                                  // 本次调度日志时间
-	GlueType                                     string `json:"glueType"`                                     // 任务模式，可选值参考 com.xxl.job.core.glue.GlueTypeEnum
+	GlueType                                     string `json:"glueType"`                                     // 任务模式，可选值参考 GlueTypeEnum
 	GlueSource                                   string `json:"glueSource"`                                   // GLUE脚本代码
 	GlueUpdatetime                               int64  `json:"glueUpdatetime"`                               // GLUE脚本更新时间，用于判定脚本是否变更以及是否需要刷新
 	BroadcastIndex                               int64  `json:"broadcastIndex"`                               // 分片参数：当前分片

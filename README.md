@@ -1,6 +1,9 @@
 # go-scheduler-sdk
+
 很多公司java与go开发共存，java中有go-scheduler做为任务调度引擎，为此也出现了go执行器(客户端)，使用起来比较简单：
+
 # 支持
+
 ```	
 1.执行器注册
 2.耗时任务取消
@@ -16,6 +19,7 @@
 ```
 
 # Example
+
 ```
 package main
 
@@ -94,7 +98,7 @@ func main() {
 	fmt.Println(exec.GetAddress())
 }
 
-// xxl.Logger接口实现
+// gscheduler.Logger接口实现
 type logger struct{}
 
 func (l *logger) Info(format string, a ...interface{}) {
@@ -109,23 +113,36 @@ func (l *logger) Debug(format string, a ...interface{}) {
 	log.Println(fmt.Sprintf("自定义日志 [Debug]- "+format, a...))
 }
 ```
+
 # 示例项目
+
 github.com/github.com/liuhailove/go-scheduler-sdk/example/
+
 # 与gin框架集成
+
 https://github.com/liuhailove/go-scheduler-sdk
+
 # go-scheduler-admin配置
+
 ### 添加执行器
+
 执行器管理->新增执行器,执行器列表如下：
+
 ```
 AppName		名称		注册方式	OnLine 		机器地址 		操作
 golang-jobs	golang执行器	自动注册 		查看 ( 1 ）   
 ```
+
 查看->注册节点
+
 ```
 http://127.0.0.1:9999
 ```
+
 ### 添加任务
+
 任务管理->新增(注意，使用BEAN模式，JobHandler与RegTask名称一致)
+
 ```
 1	测试panic	BEAN：task.panic	* 0 * * * ?	admin	STOP	
 2	测试耗时任务	BEAN：task.test2	* * * * * ?	admin	STOP	

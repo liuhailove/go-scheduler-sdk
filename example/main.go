@@ -75,7 +75,7 @@ func main() {
 	fmt.Println(exec.GetAddress())
 }
 
-// xxl.Logger接口实现
+// gscheduler.Logger接口实现
 type logger struct{}
 
 func (l *logger) Info(format string, a ...interface{}) {

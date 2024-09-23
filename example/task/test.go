@@ -22,7 +22,7 @@ func Test(ctx context.Context, param *gs.RunReq) (msg []string, err error) {
 	//time.Sleep(20 * time.Second)
 	for i := 0; i < 10; i++ {
 		//
-		//fmt.Println(time.Now().String() + ":test one task" + param.ExecutorHandler + " param：" + param.ExecutorParams + " log_id:" + xxl.Int64ToStr(param.LogID))
+		//fmt.Println(time.Now().String() + ":test one task" + param.ExecutorHandler + " param：" + param.ExecutorParams + " log_id:" + Int64ToStr(param.LogID))
 		//time.Sleep(1 * time.Millisecond)
 		var a = A{}
 		a.V1 = "a"

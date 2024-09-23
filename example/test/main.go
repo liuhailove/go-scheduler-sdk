@@ -31,7 +31,7 @@ type RunReq struct {
 	ExecutorTimeout       int64  `json:"executorTimeout"`       // 任务超时时间，单位秒，大于零时生效
 	LogID                 int64  `json:"logId"`                 // 本次调度日志ID
 	LogDateTime           int64  `json:"logDateTime"`           // 本次调度日志时间
-	GlueType              string `json:"glueType"`              // 任务模式，可选值参考 com.xxl.job.core.glue.GlueTypeEnum
+	GlueType              string `json:"glueType"`              // 任务模式，可选值参考 GlueTypeEnum
 	GlueSource            string `json:"glueSource"`            // GLUE脚本代码
 	GlueUpdatetime        int64  `json:"glueUpdatetime"`        // GLUE脚本更新时间，用于判定脚本是否变更以及是否需要刷新
 	BroadcastIndex        int64  `json:"broadcastIndex"`        // 分片参数：当前分片

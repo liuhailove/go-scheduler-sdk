@@ -906,7 +906,7 @@ func (e *executor) post(action, body string) (resp *http.Response, servAddr stri
 	}
 	request.Close = true
 	request.Header.Set("Content-Type", "application/json;charset=UTF-8")
-	request.Header.Set("XXL-JOB-ACCESS-TOKEN", e.opts.AccessToken)
+	request.Header.Set("GSCHEDULER-ACCESS-TOKEN", e.opts.AccessToken)
 	resp, err = e.httpClient.Do(request)
 	return resp, servAddr, err
 }
